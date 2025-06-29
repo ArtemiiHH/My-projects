@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mortgage Calulator</title>
+  <link rel="stylesheet" href="mortgage-calc.css">
+  <!-- Icon Script -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Font Script -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Calculator Box -->
+  <div id="calc-box">
+
+    <!-- Left Side -->
+    <div id="calculation">
+
+      <!-- Mortgage Calculator / Clear all -->
+      <div id="title">
+        <h2>Mortgage Calculator</h2>
+        <button id="clear-btn"><u>Clear all</u></button>
+      </div>
+
+      <!-- Mortgage Amount -->
+      <div id="mort-amount">
+        <label for="mort-amount-input">Mortgage Amount</label>
+
+        <div class="currency-input">
+          <span class="currency-symbol">$</span>
+          <input id="mort-amount-input" type="number">
+        </div>
+
+        <p class="error-text-amount">This field is required</p>
+      </div>
+
+      <!-- Mortgage Term / Rate -->
+      <div id="mort-term-rate">
+        <div id="term">
+          <label for="mort-term-input">Mortgage Term</label>
+
+          <div class="years-input">
+            <input id="mort-term-input" type="number">
+            <span class="years-symbol">years</span>
+          </div>
+
+          <p class="error-text-term">This field is required</p>
+        </div>
+
+        <div id="rate">
+          <label for="mort-rate-input">Interest Rate</label>
+
+          <div class="percentage-input">
+            <input id="mort-rate-input" type="number">
+            <span class="percentage-symbol">%</span>
+          </div>
+
+          <p class="error-text-rate">This field is required</p>
+        </div>
+      </div>
+
+      <!-- Mortgage Type Radio Buttons -->
+      <div id="radio-group">
+        <label>
+          <input type="radio" name="mortgageType" value="repayment" class="radio-input" checked/>
+          <div class="radio-option">Repayment</div>
+        </label>
+        <label>
+          <input type="radio" name="mortgageType" value="interest-only" class="radio-input" />
+          <div class="radio-option">Interest Only</div>
+        </label>
+      </div>
+
+
+      <!-- Calculate Button -->
+      <button id="calc-btn" type="button"><i class="fa-solid fa-calculator"></i> Calculate Repayments</button>
+
+    </div>
+
+    <!-- Right Side -->
+    <!-- Onload result -->
+    <div id="result">
+      <img src="/frontendmentorEx/Mortgage Payment Ex/images/budget.png" alt="calculator">
+      <h2>Results shown here</h2>
+      <p>Complete the form and click "Calculate Repayments" button or press "Enter" to see what your monthly repayments
+        would be.</p>
+    </div>
+
+    <!-- Onclick new result -->
+    <div id="new-result" style="display: none;">
+      <h2>Your results</h2>
+      <p class="your-result-text">Your results are shown based on the information you provided. To adjust the results,
+        edit the form and click
+        "calculate repayments" button again.</p>
+
+      <div id="new-result-box">
+        <div id="month-payment-result">
+          <p class="box-text">Your monthly repayments:</p>
+          <h1 id="total-monthly"><span id="total-monthly">$1000</span></h1>
+        </div>
+        <hr>
+        <div id="total-payment-result">
+          <p class="box-text">Total you will repay over the term:</p>
+          <h2 id="total">$1000</h2>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="mortgage-calc.js"></script>
+
+</body>
+
+</html>
