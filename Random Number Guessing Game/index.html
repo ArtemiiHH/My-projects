@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11. Random Number Guessing Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div id="container">
+    <!-- Title -->
+    <h1 id="title">Guess My <span>Number</span> Game</h1>
+    <br>
+    <!-- Game box -->
+    <div id="box">
+      <!-- Game description -->
+      <p id="description">
+        💡Computer picked a number between 1 and 100. You have 10 tries to guess it. After each guess, you’re told if
+        the
+        number is <span id="higher">higher</span> or <span id="lower">lower</span>. Good luck :)
+      </p>
+      <!-- Input + buttons -->
+      <div id="insert">
+        <input type="number" name="" id="number-input" placeholder="Enter a number">
+        <button id="guess-btn" type="submit">Guess</button>
+        <button id="restart-btn">Restart</button>
+      </div>
+      <!-- Result displays -->
+      <p id="result"></p>
+      <p id="tries-display">Tries: 10</p>
+    </div>
+
+  </div>
+  <!-- Load the confetti library from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Load your game logic -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
